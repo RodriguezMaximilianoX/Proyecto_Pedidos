@@ -1,0 +1,43 @@
+[
+    {
+        "id":1,
+        "nombre": "Clasica",
+        "precio": 350,
+        "img": "../assets/clasica.png"
+    }, 
+    
+    {
+        "id":2,
+        "nombre": "Doble",
+        "precio": 500,
+        "img": "../assets/doble.png"
+    },
+
+    {
+        "id":3,
+        "nombre": "Bacon",
+        "precio": 600,
+        "img": "../assets/bacon.png"
+    },
+
+    {
+        "id":4,
+        "nombre": "Black",
+        "precio": 500,
+        "img": "../assets/black.png"
+    },
+
+    {
+        "id":5,
+        "nombre": "American",
+        "precio": 450,
+        "img": "../assets/american.png"
+    },
+
+    {
+        "id":6,
+        "nombre": "Big Bacon",
+        "precio": 500,
+        "img": "../assets/big_bacon.png"
+    }
+]
