@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    font-family: 'Lobster', cursive;
+}
+
+#header{
+    background: #DD1C1A;
+    font-family: 'Macondo', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15vh;
+    align-items: center;
+}
+
+.header__titulo{
+    font-size: 50px;
+    padding: 0 2rem;
+}
+
+.header__cart{
+    margin: 0 3rem;
+}
+
+.header__cart-icon{
+    color: #000;
+    margin: 1rem;
+    padding: 1.5rem;
+    background: #F0C808;
+    border-radius: 50px;
+}
+
+.header__cart-icon span{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    margin: 2em;
+    background: #F0C808;
+    padding: 2em;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card p{
+    margin: 10px;
+    font-size: 30px;
+}
+
+.imgProducto{
+    width: 300px;
+    height: 200px;
+}
+
+.btnAgregar{
+    background: #FA8B0C;
+    border: none;
+    padding: 1em;
+    border-radius: 20px;
+    width: 10vw;
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+}
+
+.btnAgregar:hover{
+    background: #E34500;
+    color: #f2f2f2;
+}
+
+.cartContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txtCarrito{
+    color: #f2f2f2;
+    margin: 0.5em;
+    font-size: 50px;
+}
+
+.btnVolver{
+    background: #FA8B0C;
+    border: none;
+    padding: 1em;
+    border-radius: 20px;
+    width: 10vw;
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+}
+
+.btnVolver:hover{
+    background: #E34500;
+    color: #f2f2f2;
+}
+
+.tableContainer{
+    background: #f2f2f2;
+    margin: 0em 50em;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.imgProdCart{
+    width: 200px;
+    height: 150px;
+}
+
+.txtTable{
+    font-size: 20px;
+    margin: 1em;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.btnTerminar{
+    background: #FA8B0C;
+    border: none;
+    padding: 1em;
+    border-radius: 20px;
+    width: 10vw;
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+}
+
+.btnTerminar:hover{
+    background: #E34500;
+    color: #f2f2f2;
+}

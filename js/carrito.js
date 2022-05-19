@@ -10,8 +10,8 @@ if(carrito.length == 0){
     const texto = `
         <div class="cartContainer">
             <h1 class="txtCarrito">No hay productos en el carrito</h1>
-            <a class="btnVolver" href="../index.html">
-                <button>Volver</button>
+            <a  href="../index.html">
+                <button class="btnVolver">Volver al Menú</button>
             </a>
         </div>`;
     body.innerHTML += texto;
@@ -23,7 +23,7 @@ else{
     </div>`;
     body.innerHTML += titulo;
     const table = `
-    <div class="tableContainer">
+    <div class="tableContainer cartContainer">
         <table>
             <thead>
                 <tr>
@@ -37,24 +37,27 @@ else{
             <tfooter>
                 <tr>
                     <th></th>
-                    <th class="txtTotal">Total:</th>
+                    <th class="txtTable">Total:</th>
                     <th id="total">$${totalCarrito().toLocaleString()}</th>
                 <tr>
             </tfooter>
         </table>
     </div>
     <div class="btnContainer">
+        <a  href="../index.html">
+            <button class="btnVolver">Volver al Menú</button>
+        </a>
         <button class="btnTerminar">Terminar Compra</button>
     </div>`;
     body.innerHTML += table;
     const tbody = document.getElementById("tbody")
     for (let i = 0; i < carrito.length; i++) {
         const element = carrito[i];
-        const {id, nombre, img, precio} = element
+        const {id, nombre, precio} = element
         const cart = `
         <tr id=${id}>
             <th><button class="eliminar"><i class="fa-solid fa-trash"></i></button></th>
-            <th><img class="imgProdCart" src=${img} alt="foto del producto"><span class="nombreProd">${nombre}</span></th>
+            <th><span class="txtTable">${nombre}</span></th>
             <th>$${precio.toLocaleString()}</th>
         </tr>`;
         tbody.innerHTML += cart
@@ -74,4 +77,20 @@ function eliminarMenu(e){
     carrito.pop(prodEncontrado)
     localStorage.setItem("carrito", JSON.stringify(carrito))
     location.reload();
+}
+
+const error = document.getElementsByClassName("btnTerminar")
+
+for (let i = 0; i < error.length; i++) {
+    const element = error[i];
+    element.addEventListener("click", alerta)
+    
+}
+
+function alerta(){
+    Swal.fire({
+        title: "¡Error!",
+        text: "No podemos procesar tu pago en este momento. Por favor vuelve a intentarlo mas tarde",
+        icon: "error"
+    })
 }
